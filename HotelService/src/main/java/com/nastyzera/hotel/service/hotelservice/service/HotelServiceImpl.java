@@ -21,7 +21,6 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public Hotel create(Hotel hotel) {
-        log.info("Hotel creation started");
         String hotelId = UUID.randomUUID().toString().substring(0, 5);
         log.info("Creating hotel with id "+hotelId);
         if (hotelRepository.findById(hotelId).isPresent())
@@ -29,17 +28,17 @@ public class HotelServiceImpl implements HotelService {
         hotel.setId(hotelId);
         log.info("hotel with id "+hotelId+" Created");
         return hotelRepository.save(hotel);
-        
     }
 
     @Override
     public List<Hotel> getAll() {
+        log.info("Fetching All hotels ");
         return hotelRepository.findAll();
     }
 
     @Override
     public Hotel getHotelById(String id) {
-        log.info("Inside getHotelById with id "+id);
+        log.info("Fetching Hotel with Hotel id "+id);
         return hotelRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id + " NOT FOUND"));
     }
 

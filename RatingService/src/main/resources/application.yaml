@@ -1,13 +1,13 @@
 server:
-  port: 8081
+  port: 8083
 logging:
   file:
-    name: ./logs/user-service.log
+    name: ./logs/rating-service.log
 spring:
   application:
-    name: USER-SERVICE
+    name: RATING-SERVICE
   datasource:
-    url: jdbc:mysql://localhost:3306/users_hotelreview
+    url: jdbc:mysql://localhost:3306/ratings_hotelreview
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "hotels")
+@Table(name = "micro_hotels")
 public class Hotel {
 
     @Id
@@ -26,5 +26,4 @@ public class Hotel {
     private String address;
     @Column(name = "hotel_about")
     private String about;
-
 }

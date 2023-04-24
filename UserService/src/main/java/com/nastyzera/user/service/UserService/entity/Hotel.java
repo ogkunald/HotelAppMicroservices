@@ -1,7 +1,6 @@
 package com.nastyzera.user.service.UserService.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,13 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Rating {
-    private String ratingId;
-    private String userId;
-    private String hotelId;
-    private int rating;
-    private String feedback;
-    private Hotel hotel;
+public class Hotel {
+
+    private  String id;
+    private  String name;
+    private  String location;
+    private  String about;
 
 }
